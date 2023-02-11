@@ -13,9 +13,9 @@ function User(props) {
                 <div className="userContent">
                 <Card.Img variant="top" src={details.image} className="img" />
                 <Card.Body>
-                    <Card.Title>{details.title}</Card.Title>
+                    <Card.Title>{details.username}</Card.Title>
                     <Card.Text className="description">
-                        {details.description}
+                        {details.firstName}
                     </Card.Text>
                     <Button variant="primary">Go somewhere</Button>
                 </Card.Body>
