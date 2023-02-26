@@ -13,7 +13,6 @@ class LoginForm extends React.Component {
     }
 
     updateEmail(e) {
-        console.log("Email Updated", e);
         this.setState({email: e.target.value})
 
     }
@@ -38,8 +37,24 @@ class LoginForm extends React.Component {
 
     }
 
+    componentWillMount() {
+      console.log("Login Form is going to be mounted");
+    }
+
+    componentDidMount() {
+      console.log("Login Form has been rendered on DOM");
+    }
+
+    componentWillUnmount(){
+      console.log("Login Component has been removed on DOM");
+    }
+
+    componentDidUpdate() {
+      console.log("Login Component Updated");
+    }
+
     render() {
-        console.log(this.props);
+        console.log("Login Form is rendering");
         return (
             <Form className="loginForm">
               <Form.Group className="mb-3" controlId="formBasicEmail">

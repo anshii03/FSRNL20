@@ -5,7 +5,11 @@ import "./User.css"
 function User(props) {
 
     // Object destructuring
-    const {details} = props;
+    const {details, openModal} = props;
+
+    function seeFullDetails() {
+        openModal(details.id);
+    }
 
     return (
         <div className="userCard">
@@ -17,7 +21,7 @@ function User(props) {
                     <Card.Text className="description">
                         {details.firstName}
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button variant="primary" onClick={seeFullDetails}>Show Details</Button>
                 </Card.Body>
                 </div>    
             </Card>    
